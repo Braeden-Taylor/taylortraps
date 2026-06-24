@@ -3,18 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taylor Traps | Advanced Vector Monitoring</title>
-    <!-- Tailwind CSS for sleek, modern styling -->
-    <script src="https://tailwindcss.com"></script>
+    <title>Next-Gen Vector Surveillance | Custom CDC Trap</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans">
+<body>
 
-    <!-- Header / Navigation -->
-    <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold tracking-wider text-emerald-400">TAYLOR TRAPS</h1>
+    <header>
+        <div class="nav-container">
+            <div class="logo">Trap<strong>Mod</strong></div>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="resources.html">Resources</a>
+                <a href="search.html">AI Search</a>
+                <a href="contact.html">Contact</a>
+            </nav>
         </div>
     </header>
 
+    <main>
+        <section class="hero fade-in">
+            <div class="hero-text">
+                <h1>Redefining Vector <br><span class="highlight">Surveillance</span></h1>
+                <p>An engineered modification to the standard CDC mosquito light trap, utilizing custom PCB architecture to maximize efficiency and reduce power draw.</p>
+                <div class="cta-buttons">
+                    <a href="resources.html" class="btn btn-primary">View Open Source Code</a>
+                    <a href="#research" class="btn btn-secondary">See The Data</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="placeholder-box tall">
+                    [Place 3D PCB Render or High-Quality Trap Photo Here]
+                    </div>
+            </div>
+        </section>
+
+        <section id="research" class="stats-section fade-in">
+            <div class="section-header">
+                <h2>Performance Metrics</h2>
+                <p>Field-tested data demonstrating trap optimization.</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="placeholder-box graph">
+                        [Graph: Power Consumption Comparison]
+                        </div>
+                    <h3>Power Efficiency</h3>
+                    <p>Optimized LED switching significantly extends battery life in remote field environments.</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="placeholder-box graph">
+                        [Graph: Capture Rate Data]
+                        </div>
+                    <h3>Capture Yield</h3>
+                    <p>Tuned light wavelengths targeting specific mosquito vectors, currently under peer review.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="hardware-section fade-in">
+            <div class="hardware-content">
+                <h2>Custom PCB Architecture</h2>
+                <p>The core of this modification is a custom-designed printed circuit board built from the ground up. By bypassing the legacy components of the standard CDC trap, this hardware introduces precise voltage regulation, programmable light cycles, and weather-resistant durability.</p>
+                <ul class="feature-list">
+                    <li>✓ Patent-Pending Design</li>
+                    <li>✓ Low-dropout (LDO) voltage regulation</li>
+                    <li>✓ Customizable LED switching arrays</li>
+                </ul>
+            </div>
+            <div class="hardware-visual">
+                <div class="placeholder-box wide">
+                    [Place Schematics or Soldered PCB Photo Here]
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 [Your Name]. U.S. Provisional Patent Pending.</p>
+    </footer>
+
+    <script>
+        // This script watches for elements with the 'fade-in' class and makes them visible when you scroll to them
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 }); // Triggers when 15% of the element is visible
+
+        const hiddenElements = document.querySelectorAll('.fade-in');
+        hiddenElements.forEach((el) => observer.observe(el));
+    </script>
 </body>
 </html>
