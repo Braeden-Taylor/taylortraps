@@ -1,0 +1,295 @@
+/* --- VARIABLES (Color Palette) --- */
+:root {
+    --bg-dark: #121212;         /* Deep charcoal background */
+    --bg-surface: #1E1E1E;      /* Slightly lighter for cards */
+    --accent: #00EAFF;          /* High-tech cyan/electric blue */
+    --accent-hover: #00b3cc;
+    --text-main: #F3F4F6;
+    --text-muted: #9CA3AF;
+    --font-stack: 'Inter', sans-serif;
+}
+
+/* --- BASE STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- SCROLL ANIMATIONS --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- NAVIGATION --- */
+header {
+    background-color: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.logo strong {
+    color: var(--accent);
+    font-weight: 800;
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: var(--accent);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    max-width: 1200px;
+    margin: 150px auto 100px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+.hero-text p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+/* --- BUTTONS --- */
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--bg-dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--text-muted);
+}
+
+.btn-secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* --- PLACEHOLDERS FOR YOUR ASSETS --- */
+.placeholder-box {
+    background-color: var(--bg-surface);
+    border: 1px dashed var(--text-muted);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-visual {
+    flex: 1;
+}
+
+.placeholder-box.tall {
+    height: 400px;
+    width: 100%;
+}
+
+.placeholder-box.wide {
+    height: 300px;
+    width: 100%;
+}
+
+.placeholder-box.graph {
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+/* --- STATS SECTION --- */
+.stats-section {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    color: var(--text-muted);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.stat-card {
+    background-color: var(--bg-surface);
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 3px solid var(--accent);
+}
+
+.stat-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.stat-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* --- HARDWARE SECTION --- */
+.hardware-section {
+    max-width: 1200px;
+    margin: 100px auto 150px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.hardware-content {
+    flex: 1;
+}
+
+.hardware-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hardware-content p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.feature-list {
+    list-style: none;
+}
+
+.feature-list li {
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.hardware-visual {
+    flex: 1;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVE DESIGN (For mobile phones) --- */
+@media (max-width: 768px) {
+    .hero, .hardware-section {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 100px;
+    }
+    .cta-buttons {
+        justify-content: center;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav a {
+        margin: 0 10px;
+    }
+}
