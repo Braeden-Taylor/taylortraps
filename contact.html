@@ -255,17 +255,11 @@
     </footer>
 
     <script>
-        // Replace this with the email address where you want to receive messages.
         const contactEmail = "brt7386@gmail.com";
 
         const form = document.querySelector("#contact-form");
         form.addEventListener("submit", (event) => {
             event.preventDefault();
-
-            if (contactEmail === "brt7386@gmail.com") {
-                alert("Set your email address in the contactEmail variable in contact.html before using this form.");
-                return;
-            }
 
             const fields = new FormData(form);
             const subject = encodeURIComponent("TaylorTraps: " + fields.get("topic"));
