@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#121212">
+    <title>Contact | TaylorTraps</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/Favicon1.png">
+    <style>
+        .contact-main {
+            max-width: 1200px;
+            margin: 150px auto 100px;
+            padding: 0 20px;
+        }
+
+        .contact-intro {
+            max-width: 760px;
+            margin-bottom: 55px;
+        }
+
+        .contact-eyebrow {
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .contact-intro h1 {
+            font-size: clamp(2.6rem, 6vw, 4.5rem);
+            line-height: 1.05;
+            margin-bottom: 22px;
+        }
+
+        .contact-intro p {
+            max-width: 650px;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.2fr);
+            gap: 40px;
+            align-items: start;
+        }
+
+        .contact-info,
+        .contact-form-card {
+            background: var(--bg-surface);
+            border-radius: 8px;
+            padding: 34px;
+        }
+
+        .contact-info {
+            border-top: 3px solid var(--accent);
+        }
+
+        .contact-info h2,
+        .contact-form-card h2 {
+            font-size: 1.45rem;
+            margin-bottom: 12px;
+        }
+
+        .contact-info > p,
+        .form-intro {
+            color: var(--text-muted);
+            margin-bottom: 28px;
+        }
+
+        .contact-reasons {
+            list-style: none;
+            display: grid;
+            gap: 18px;
+        }
+
+        .contact-reasons li {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 16px;
+        }
+
+        .contact-reasons strong {
+            display: block;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+
+        .contact-reasons span {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 18px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .contact-form label {
+            display: grid;
+            gap: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 4px;
+            background: #171717;
+            color: var(--text-main);
+            padding: 12px 13px;
+            font: inherit;
+        }
+
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .contact-form .btn {
+            border: 0;
+            cursor: pointer;
+            justify-self: start;
+            font: inherit;
+        }
+
+        .form-note {
+            color: var(--text-muted);
+            font-size: 0.82rem;
+            margin-top: -6px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-main {
+                margin-top: 150px;
+            }
+
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info,
+            .contact-form-card {
+                padding: 25px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .fade-in {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/Ttraplogo4.png" alt="Ttrap Logo" style="height:80px; width:auto; border-radius:8px; display:block;">
+            </div>
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="resources.html">Resources</a>
+                <a href="contact.html" class="active" aria-current="page">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-main">
+        <section class="contact-intro fade-in">
+            <p class="contact-eyebrow">Get in touch</p>
+            <h1>Let's put the <span class="highlight">Ttrap</span> to work.</h1>
+            <p>Interested in testing a trap or learning more about the design? Send a note and tell me what you have in mind.</p>
+        </section>
+
+        <section class="contact-layout fade-in" aria-label="Contact TaylorTraps">
+            <aside class="contact-info">
+                <h2>What would you like to discuss?</h2>
+                <p>Share a little context so I can point you in the right direction.</p>
+                <ul class="contact-reasons">
+                    <li>
+                        <strong>Test a trap</strong>
+                        <span>Ask about field testing or evaluating the modified CDC trap.</span>
+                    </li>
+                    <li>
+                        <strong>Technical questions</strong>
+                        <span>Discuss the PCB, LED wavelengths, power use, or trap setup.</span>
+                    </li>
+                    <li>
+                        <strong>Research collaboration</strong>
+                        <span>Connect about vector surveillance projects and opportunities.</span>
+                    </li>
+                </ul>
+            </aside>
+
+            <div class="contact-form-card">
+                <h2>Send a message</h2>
+                <p class="form-intro">Fill this out and your email app will open with the message ready to send.</p>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-row">
+                        <label for="name">Name
+                            <input id="name" name="name" type="text" autocomplete="name" required>
+                        </label>
+                        <label for="email">Email
+                            <input id="email" name="email" type="email" autocomplete="email" required>
+                        </label>
+                    </div>
+                    <label for="topic">I'm reaching out about
+                        <select id="topic" name="topic">
+                            <option>Testing a Ttrap</option>
+                            <option>Technical questions</option>
+                            <option>Research collaboration</option>
+                            <option>Something else</option>
+                        </select>
+                    </label>
+                    <label for="message">Message
+                        <textarea id="message" name="message" required></textarea>
+                    </label>
+                    <button class="btn btn-primary" type="submit">Open email draft</button>
+                    <p class="form-note">This form opens your email app; it does not send or store your information on this website.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Braeden Taylor. Licensed under
+            <a href="https://creativecommons.org" target="_blank" rel="license noopener noreferrer">CC BY 4.0</a>.
+        </p>
+    </footer>
+
+    <script>
+        // Replace this with the email address where you want to receive messages.
+        const contactEmail = "brt7386@gmail.com";
+
+        const form = document.querySelector("#contact-form");
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            if (contactEmail === "brt7386@gmail.com") {
+                alert("Set your email address in the contactEmail variable in contact.html before using this form.");
+                return;
+            }
+
+            const fields = new FormData(form);
+            const subject = encodeURIComponent("TaylorTraps: " + fields.get("topic"));
+            const body = encodeURIComponent(
+                "Name: " + fields.get("name") + "\n" +
+                "Reply email: " + fields.get("email") + "\n\n" +
+                fields.get("message")
+            );
+
+            window.location.href = "mailto:" + contactEmail + "?subject=" + subject + "&body=" + body;
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll(".fade-in").forEach((element) => observer.observe(element));
+    </script>
+</body>
+</html>
+
